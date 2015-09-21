@@ -1107,13 +1107,8 @@ Detects support for the cryptographic functionality available under window.crypt
 */
 
   var crypto = prefixed('crypto', window);
-  var hasSubtle = false;
-
-  if (crypto && 'subtle' in crypto) {
-    hasSubtle = true;
-  }
-
-  Modernizr.addTest('cryptography', hasSubtle);
+	console.log(prefixed('subtle',crypto));
+  Modernizr.addTest('cryptography', !!prefixed('subtle',crypto));
 
 
 
