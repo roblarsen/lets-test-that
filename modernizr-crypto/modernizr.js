@@ -1105,7 +1105,7 @@
 /* DOC
 Detects support for the cryptographic functionality available under window.crypto.subtle
 */
-define(['Modernizr', 'prefixed'], function(Modernizr, prefixed) {
+
   var crypto = prefixed('crypto', window);
   var hasSubtle = false;
 
@@ -1114,7 +1114,6 @@ define(['Modernizr', 'prefixed'], function(Modernizr, prefixed) {
   }
 
   Modernizr.addTest('cryptography', hasSubtle);
-});
 
 
 
